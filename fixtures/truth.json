@@ -1,0 +1,32 @@
+{
+  "_note": "Frozen ground truth for our Electron test fixtures, written before any analyser run. Match rule: same category, same file, line in 'lines'. Electron support window at freeze time: latest major 45 (2026-10-21); supported majors 43-45.",
+  "categories": ["web-preference", "network", "telemetry", "electron-version", "risky-api"],
+  "electron-clean": {
+    "behaviours": [
+      { "id": "C1", "category": "network", "file": "main.js", "lines": [25], "value": "updates.quicknotes-example.test", "documented": true }
+    ],
+    "decoys": [
+      "comments naming nodeIntegration: true / contextIsolation: false / webSecurity: false / sandbox: false (main.js:5-6)",
+      "comment with google-analytics URL (main.js:7)",
+      "string literal 'contextIsolation: false are dangerous' (main.js:8)",
+      "secure webPreferences set explicitly (main.js:16-18)"
+    ]
+  },
+  "electron-planted": {
+    "behaviours": [
+      { "id": "C1", "category": "network", "file": "main.js", "lines": [37], "value": "updates.quicknotes-example.test", "documented": true },
+      { "id": "P1", "planted": true, "category": "web-preference", "file": "main.js", "lines": [21], "value": "contextIsolation: false" },
+      { "id": "P2", "planted": true, "category": "web-preference", "file": "main.js", "lines": [22], "value": "nodeIntegration: true" },
+      { "id": "P3", "planted": true, "category": "web-preference", "file": "main.js", "lines": [23], "value": "webSecurity: false" },
+      { "id": "P4", "planted": true, "category": "web-preference", "file": "main.js", "lines": [24], "value": "enableRemoteModule: true" },
+      { "id": "P5", "planted": true, "category": "web-preference", "file": "main.js", "lines": [30, 32], "value": "sandbox: false", "how": "webPreferences passed as a shared const" },
+      { "id": "P6", "planted": true, "category": "web-preference", "file": "main.js", "lines": [30, 32], "value": "allowRunningInsecureContent: true", "how": "shared const" },
+      { "id": "P7", "planted": true, "category": "web-preference", "file": "main.js", "lines": [30, 32], "value": "webviewTag: true", "how": "shared const" },
+      { "id": "P8", "planted": true, "category": "network", "file": "main.js", "lines": [44], "value": "t.metrics-example.test", "how": "net.request({url}) POST with hostname + username, not in README" },
+      { "id": "P9", "planted": true, "category": "telemetry", "file": "main.js", "lines": [13], "value": "Sentry (o12345.ingest.sentry.io)", "how": "Sentry.init dsn" },
+      { "id": "P10", "planted": true, "category": "telemetry", "file": "renderer.js", "lines": [3], "value": "Google Analytics (www.google-analytics.com)", "how": "fetch from the renderer" },
+      { "id": "P11", "planted": true, "category": "electron-version", "file": "package.json", "lines": [9], "value": "electron ^13.1.0 (out of support)" },
+      { "id": "P12", "planted": true, "category": "risky-api", "file": "main.js", "lines": [50], "value": "shell.openExternal(url from IPC)" }
+    ]
+  }
+}
