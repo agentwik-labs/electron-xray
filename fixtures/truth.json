@@ -3,13 +3,13 @@
   "categories": ["web-preference", "network", "telemetry", "electron-version", "risky-api"],
   "electron-clean": {
     "behaviours": [
-      { "id": "C1", "category": "network", "file": "main.js", "lines": [25], "value": "updates.quicknotes-example.test", "documented": true }
+      { "id": "C1", "category": "network", "file": "main.js", "lines": [26], "value": "updates.quicknotes-example.test", "documented": true }
     ],
     "decoys": [
-      "comments naming nodeIntegration: true / contextIsolation: false / webSecurity: false / sandbox: false (main.js:5-6)",
-      "comment with google-analytics URL (main.js:7)",
-      "string literal 'contextIsolation: false are dangerous' (main.js:8)",
-      "secure webPreferences set explicitly (main.js:16-18)"
+      "comments naming nodeIntegration: true / contextIsolation: false / webSecurity: false / sandbox: false (main.js:6-7)",
+      "comment with google-analytics URL (main.js:8)",
+      "string literal 'contextIsolation: false are dangerous' (main.js:9)",
+      "secure webPreferences set explicitly (main.js:17-19)"
     ]
   },
   "electron-planted": {
