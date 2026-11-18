@@ -1,0 +1,152 @@
+{
+ "electron-planted": {
+  "tool": {
+   "found": [
+    "C1",
+    "C2",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "P8",
+    "P9",
+    "P10",
+    "P11",
+    "P12"
+   ],
+   "missed": [],
+   "planted_found": 12,
+   "planted_total": 12,
+   "real_found": 2,
+   "real_total": 2,
+   "false_positives": 0,
+   "fp_detail": []
+  },
+  "rea_only": {
+   "found": [
+    "C1",
+    "C2",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P10"
+   ],
+   "missed": [
+    "P5",
+    "P6",
+    "P7",
+    "P8",
+    "P9",
+    "P11",
+    "P12"
+   ],
+   "planted_found": 5,
+   "planted_total": 12,
+   "real_found": 2,
+   "real_total": 2,
+   "false_positives": 0,
+   "fp_detail": []
+  },
+  "grep": {
+   "found": [
+    "C1",
+    "C2",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "P8",
+    "P9",
+    "P10",
+    "P11",
+    "P12"
+   ],
+   "missed": [],
+   "planted_found": 12,
+   "planted_total": 12,
+   "real_found": 2,
+   "real_total": 2,
+   "false_positives": 4,
+   "fp_detail": [
+    "web-preference main.js:8 nodeIntegration: true",
+    "web-preference main.js:9 webSecurity: false",
+    "telemetry main.js:10 Google Analytics",
+    "web-preference main.js:11 contextIsolation: false"
+   ]
+  },
+  "overlap": {
+   "both": 12,
+   "only_rea": 0,
+   "only_grep": 4,
+   "only_grep_in_comments": 3,
+   "only_grep_by_category": {
+    "web-preference": 1
+   }
+  },
+  "implicit": [
+   "main.js:16 sandbox: false (default in Electron 13)"
+  ]
+ },
+ "electron-clean": {
+  "tool": {
+   "found": [
+    "C1"
+   ],
+   "missed": [],
+   "planted_found": 0,
+   "planted_total": 0,
+   "real_found": 1,
+   "real_total": 1,
+   "false_positives": 0,
+   "fp_detail": []
+  },
+  "rea_only": {
+   "found": [
+    "C1"
+   ],
+   "missed": [],
+   "planted_found": 0,
+   "planted_total": 0,
+   "real_found": 1,
+   "real_total": 1,
+   "false_positives": 0,
+   "fp_detail": []
+  },
+  "grep": {
+   "found": [
+    "C1"
+   ],
+   "missed": [],
+   "planted_found": 0,
+   "planted_total": 0,
+   "real_found": 1,
+   "real_total": 1,
+   "false_positives": 5,
+   "fp_detail": [
+    "web-preference main.js:6 nodeIntegration: true",
+    "web-preference main.js:7 webSecurity: false",
+    "telemetry main.js:8 Google Analytics",
+    "web-preference main.js:9 contextIsolation: false",
+    "electron-version package.json:9 \"electron\": \"^45.2.0\""
+   ]
+  },
+  "overlap": {
+   "both": 1,
+   "only_rea": 0,
+   "only_grep": 5,
+   "only_grep_in_comments": 3,
+   "only_grep_by_category": {
+    "web-preference": 1,
+    "electron-version": 1
+   }
+  },
+  "implicit": []
+ }
+}

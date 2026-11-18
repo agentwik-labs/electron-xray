@@ -1,0 +1,306 @@
+{
+ "measured_at": "2026-11-18",
+ "rea_version": "6.7.0",
+ "fixtures": {
+  "electron-planted": {
+   "tool": {
+    "found": [
+     "C1",
+     "C2",
+     "P1",
+     "P2",
+     "P3",
+     "P4",
+     "P5",
+     "P6",
+     "P7",
+     "P8",
+     "P9",
+     "P10",
+     "P11",
+     "P12"
+    ],
+    "missed": [],
+    "planted_found": 12,
+    "planted_total": 12,
+    "real_found": 2,
+    "real_total": 2,
+    "false_positives": 0,
+    "fp_detail": []
+   },
+   "rea_only": {
+    "found": [
+     "C1",
+     "C2",
+     "P1",
+     "P2",
+     "P3",
+     "P4",
+     "P10"
+    ],
+    "missed": [
+     "P5",
+     "P6",
+     "P7",
+     "P8",
+     "P9",
+     "P11",
+     "P12"
+    ],
+    "planted_found": 5,
+    "planted_total": 12,
+    "real_found": 2,
+    "real_total": 2,
+    "false_positives": 0,
+    "fp_detail": []
+   },
+   "grep": {
+    "found": [
+     "C1",
+     "C2",
+     "P1",
+     "P2",
+     "P3",
+     "P4",
+     "P5",
+     "P6",
+     "P7",
+     "P8",
+     "P9",
+     "P10",
+     "P11",
+     "P12"
+    ],
+    "missed": [],
+    "planted_found": 12,
+    "planted_total": 12,
+    "real_found": 2,
+    "real_total": 2,
+    "false_positives": 4,
+    "fp_detail": [
+     "web-preference main.js:8 nodeIntegration: true",
+     "web-preference main.js:9 webSecurity: false",
+     "telemetry main.js:10 Google Analytics",
+     "web-preference main.js:11 contextIsolation: false"
+    ]
+   },
+   "overlap": {
+    "both": 12,
+    "only_rea": 0,
+    "only_grep": 4,
+    "only_grep_in_comments": 3,
+    "only_grep_by_category": {
+     "web-preference": 1
+    }
+   },
+   "implicit": [
+    "main.js:16 sandbox: false (default in Electron 13)"
+   ]
+  },
+  "electron-clean": {
+   "tool": {
+    "found": [
+     "C1"
+    ],
+    "missed": [],
+    "planted_found": 0,
+    "planted_total": 0,
+    "real_found": 1,
+    "real_total": 1,
+    "false_positives": 0,
+    "fp_detail": []
+   },
+   "rea_only": {
+    "found": [
+     "C1"
+    ],
+    "missed": [],
+    "planted_found": 0,
+    "planted_total": 0,
+    "real_found": 1,
+    "real_total": 1,
+    "false_positives": 0,
+    "fp_detail": []
+   },
+   "grep": {
+    "found": [
+     "C1"
+    ],
+    "missed": [],
+    "planted_found": 0,
+    "planted_total": 0,
+    "real_found": 1,
+    "real_total": 1,
+    "false_positives": 5,
+    "fp_detail": [
+     "web-preference main.js:6 nodeIntegration: true",
+     "web-preference main.js:7 webSecurity: false",
+     "telemetry main.js:8 Google Analytics",
+     "web-preference main.js:9 contextIsolation: false",
+     "electron-version package.json:9 \"electron\": \"^45.2.0\""
+    ]
+   },
+   "overlap": {
+    "both": 1,
+    "only_rea": 0,
+    "only_grep": 5,
+    "only_grep_in_comments": 3,
+    "only_grep_by_category": {
+     "web-preference": 1,
+     "electron-version": 1
+    }
+   },
+   "implicit": []
+  }
+ },
+ "real": [
+  {
+   "id": "stretchly",
+   "repo": "https://github.com/hovancik/stretchly",
+   "commit": "64450ca",
+   "commit_date": "2026-11-05",
+   "license": "BSD-2-Clause",
+   "files": 46,
+   "rea_s": 10.9,
+   "coverage": "unknown",
+   "electron": "^44.9.3 (supported)",
+   "windows": 8,
+   "windows_prefs_resolved": 8,
+   "unsafe_prefs": [
+    "sandbox: false",
+    "sandbox: false",
+    "sandbox: false",
+    "sandbox: false",
+    "sandbox: false",
+    "sandbox: false",
+    "sandbox: false",
+    "sandbox: false"
+   ],
+   "unsafe_by_default": [],
+   "telemetry": [],
+   "hosts": [
+    "api.github.com"
+   ],
+   "hosts_not_in_readme": [],
+   "risky": 5,
+   "ipc_handlers": 31,
+   "deps": 14,
+   "both": 14,
+   "only_rea": 0,
+   "only_grep": 22,
+   "only_grep_in_comments": 5,
+   "only_grep_by_category": {
+    "network": 11,
+    "risky-api": 5,
+    "electron-version": 1
+   }
+  },
+  {
+   "id": "caprine",
+   "repo": "https://github.com/sindresorhus/caprine",
+   "commit": "c3cbcf9",
+   "commit_date": "2026-01-01",
+   "license": "MIT",
+   "files": 18,
+   "rea_s": 4.5,
+   "coverage": "unknown",
+   "electron": "^29.0.1 (16 majors behind)",
+   "windows": 1,
+   "windows_prefs_resolved": 1,
+   "unsafe_prefs": [
+    "nodeIntegration: true"
+   ],
+   "unsafe_by_default": [
+    "sandbox: false (default in Electron 29 with nodeIntegration on)"
+   ],
+   "telemetry": [],
+   "hosts": [],
+   "hosts_not_in_readme": [],
+   "risky": 3,
+   "ipc_handlers": 0,
+   "deps": 17,
+   "both": 5,
+   "only_rea": 0,
+   "only_grep": 28,
+   "only_grep_in_comments": 12,
+   "only_grep_by_category": {
+    "network": 16
+   }
+  },
+  {
+   "id": "electron-markdownify",
+   "repo": "https://github.com/amitmerchant1990/electron-markdownify",
+   "commit": "13cb55c",
+   "commit_date": "2025-05-21",
+   "license": "MIT",
+   "files": 18,
+   "rea_s": 42,
+   "coverage": "unknown",
+   "electron": "^7.2.4 (38 majors behind)",
+   "windows": 1,
+   "windows_prefs_resolved": 1,
+   "unsafe_prefs": [
+    "nodeIntegration: true"
+   ],
+   "unsafe_by_default": [
+    "contextIsolation: false (default in Electron 7)",
+    "sandbox: false (default in Electron 7)"
+   ],
+   "telemetry": [],
+   "hosts": [],
+   "hosts_not_in_readme": [],
+   "risky": 3,
+   "ipc_handlers": 1,
+   "deps": 8,
+   "both": 5,
+   "only_rea": 0,
+   "only_grep": 18,
+   "only_grep_in_comments": 13,
+   "only_grep_by_category": {
+    "network": 5
+   }
+  },
+  {
+   "id": "jitsi-meet-electron",
+   "repo": "https://github.com/jitsi/jitsi-meet-electron",
+   "commit": "28c2dfd",
+   "commit_date": "2026-10-28",
+   "license": "Apache-2.0",
+   "files": 69,
+   "rea_s": 11.8,
+   "coverage": "unknown",
+   "electron": "^43.8.3 (supported)",
+   "windows": 3,
+   "windows_prefs_resolved": 2,
+   "unsafe_prefs": [],
+   "unsafe_by_default": [],
+   "telemetry": [],
+   "hosts": [],
+   "hosts_not_in_readme": [],
+   "risky": 1,
+   "ipc_handlers": 5,
+   "deps": 3,
+   "both": 1,
+   "only_rea": 0,
+   "only_grep": 11,
+   "only_grep_in_comments": 3,
+   "only_grep_by_category": {
+    "network": 7,
+    "electron-version": 1
+   }
+  }
+ ],
+ "totals": {
+  "apps": 4,
+  "both": 25,
+  "only_rea": 0,
+  "only_grep": 79,
+  "only_grep_in_comments": 33,
+  "only_grep_by_category": {
+   "network": 39,
+   "risky-api": 5,
+   "electron-version": 2
+  },
+  "unsafe_by_default": 3
+ }
+}

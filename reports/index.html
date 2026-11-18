@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"><title>electron-xray: measured</title><style>*{box-sizing:border-box}body{margin:0;background:#0d1016;color:#e8ecf3;font:16px/1.45 ui-sans-serif,system-ui,-apple-system,sans-serif}
+.wrap{max-width:1500px;margin:0 auto;padding:34px 44px}
+.top{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}.top h1{font:800 40px/1.1 ui-monospace,Menlo,monospace;margin:0;letter-spacing:-1px}
+.ver{color:#8b95a7;font:600 20px ui-monospace,Menlo,monospace}.desc{color:#aab3c5;margin:6px 0 0;font-size:18px;max-width:1100px}
+.tag{display:inline-block;background:#f5c04a;color:#10131a;font:800 15px ui-monospace,Menlo,monospace;padding:5px 12px;border-radius:6px;letter-spacing:.5px}
+.meta{color:#8b95a7;font:14px ui-monospace,Menlo,monospace;margin-top:10px}
+.tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:22px 0}
+.tile{background:#151a23;border:1px solid #232a37;border-radius:12px;padding:14px 16px}.tile b{display:block;font:800 38px/1 ui-monospace,Menlo,monospace}.tile span{color:#8b95a7;font-size:14px}
+.tile.warn b{color:#ff8a65}.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.card{background:#151a23;border:1px solid #232a37;border-radius:12px;padding:14px 18px;min-height:120px}.card h2{font-size:15px;text-transform:uppercase;letter-spacing:1.2px;color:#8b95a7;margin:0 0 10px}
+.row{display:flex;gap:8px;align-items:center;font:14.5px/1.5 ui-monospace,Menlo,monospace;padding:3px 0;border-bottom:1px solid #1c2230}.row:last-child{border:0}
+.row .v{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.row .w{color:#6d7789;font-size:12.5px}
+.b{font:700 11.5px ui-monospace,Menlo,monospace;padding:2px 7px;border-radius:5px;white-space:nowrap}.b.doc{background:#16352a;color:#5fd39a}.b.undoc{background:#3d2a14;color:#ffb35c}
+.b.sec{background:#3a1a24;color:#ff7a95}.b.pl{background:#f5c04a;color:#111}.b.lay{background:#1f2633;color:#8fa3c4}
+.none{color:#5c6577;font-style:italic}.foot{color:#6d7789;font-size:13.5px;margin-top:16px}
+table{border-collapse:collapse;width:100%;font:15px ui-monospace,Menlo,monospace}td,th{padding:8px 10px;border-bottom:1px solid #232a37;text-align:right}td:first-child,th:first-child{text-align:left}th{color:#8b95a7;font-weight:600}
+.big{font:800 30px ui-monospace,Menlo,monospace}</style></head><body><div class="wrap">
+<div class="top"><h1>electron-xray</h1><span class="ver">privacy and security report for a desktop app</span></div>
+<p class="desc">What IT asks before approving an Electron app: unsafe window settings, telemetry, endpoints, Electron age, risky calls. Built on REA; static only.</p>
+<div class="grid" style="grid-template-columns:1fr 1.3fr">
+<div class="card" id="fixture"><h2><span class="tag">OUR TEST FIXTURE</span> &nbsp;12 planted, frozen before the first run</h2>
+<table><tr><th>planted twin</th><th>planted found</th><th>false positives</th></tr><tr><td>electron-xray</td><td class="big">12 / 12</td><td class="big">0</td></tr><tr><td>REA facts alone</td><td class="big">5 / 12</td><td class="big">0</td></tr><tr><td>plain grep</td><td class="big">12 / 12</td><td class="big">4</td></tr></table>
+<table style="margin-top:12px"><tr><th>clean twin</th><th>false positives</th></tr><tr><td>electron-xray</td><td class="big">0</td></tr><tr><td>plain grep</td><td class="big">5</td></tr></table>
+<div class="foot">electron-xray false positives: 0. grep's: comments, a help string, and a current Electron version it cannot date.</div></div>
+<div class="card" id="real"><h2>4 open-source Electron apps (source, permissive licences)</h2>
+<table><tr><th>app</th><th>electron</th><th>unsafe set</th><th>unsafe by default</th><th>telemetry</th><th>hosts</th></tr>
+<tr><td>stretchly</td><td>^44.9.3 (supported)</td><td>8</td><td>0</td><td>0</td><td>1</td></tr><tr><td>caprine</td><td>^29.0.1 (16 majors behind)</td><td>1</td><td>1</td><td>0</td><td>0</td></tr><tr><td>electron-markdownify</td><td>^7.2.4 (38 majors behind)</td><td>1</td><td>2</td><td>0</td><td>0</td></tr><tr><td>jitsi-meet-electron</td><td>^43.8.3 (supported)</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>
+<div class="foot">Unsafe settings are often deliberate in local-only apps; this lists them, it does not judge them.</div></div></div>
+<div class="card" style="margin-top:16px" id="vs"><h2>REA vs grep on the same files (4 apps, scored categories, by location)</h2>
+<table><tr><th>found by both</th><th>only REA layer</th><th>only grep</th><th>… in comments</th><th>unsafe-by-default (grep cannot see)</th></tr>
+<tr><td class="big">25</td><td class="big">0</td><td class="big">79</td><td>33</td><td class="big">3</td></tr></table>
+<div class="foot">See README for what each side found that the other missed.</div></div>
+</div></body></html>

@@ -1,0 +1,394 @@
+{
+ "name": "QuickNotes (our test fixture, planted twin)",
+ "pkg_name": "fixture-quicknotes-planted",
+ "version": "1.0.0",
+ "description": "OUR TEST FIXTURE (planted twin). A tiny notes app.",
+ "license": "MIT",
+ "analysed_at": "2026-11-18T15:59:03.697Z",
+ "rea_version": "6.7.0",
+ "js_files": 3,
+ "rea_ms": 2001,
+ "coverage": {
+  "status": "unknown",
+  "truncated": false
+ },
+ "electron": {
+  "range": "^13.1.0",
+  "major": 13,
+  "latest": 45,
+  "released": "2021-05-25",
+  "supported": false,
+  "majors_behind": 32,
+  "snapshot": "2026-11-06"
+ },
+ "windows": [
+  {
+   "file": "main.js",
+   "line": 32,
+   "prefs": 3,
+   "status": "dynamic"
+  },
+  {
+   "file": "main.js",
+   "line": 16,
+   "prefs": 5,
+   "status": "object-literal"
+  }
+ ],
+ "rea_summary": {
+  "browser_windows": 2,
+  "explicit_web_preferences": 5,
+  "preload_entrypoints": 1,
+  "context_bridge_apis": 1,
+  "exposed_api_members": 1,
+  "ipc": {
+   "operations": 3,
+   "literal_channels": 2,
+   "dynamic_channel_operations": 0,
+   "renderer_transmissions": 1,
+   "renderer_listeners": 0,
+   "main_handlers": 2,
+   "paired_renderer_transmissions": 1,
+   "ambiguous_renderer_transmissions": 0,
+   "unpaired_literal_renderer_transmissions": 0
+  },
+  "sender_validation_observations": 0,
+  "utility_processes": 0,
+  "resolved_utility_entrypoints": 0,
+  "native_addon_bindings": 0,
+  "resolved_native_addon_bindings": 0
+ },
+ "implicit": [
+  {
+   "category": "web-preference-default",
+   "file": "main.js",
+   "line": 16,
+   "value": "sandbox: false (default in Electron 13)",
+   "why": "renderer runs without the OS sandbox",
+   "layer": "default"
+  }
+ ],
+ "deps": [
+  "marked",
+  "@sentry/electron"
+ ],
+ "dev_deps": 1,
+ "telemetry_deps": [
+  "@sentry/electron"
+ ],
+ "facts": [
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 30,
+   "value": "sandbox: false",
+   "why": "renderer runs without the OS sandbox",
+   "layer": "rea-site"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 30,
+   "value": "allowRunningInsecureContent: true",
+   "why": "HTTP content allowed on HTTPS pages",
+   "layer": "rea-site"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 30,
+   "value": "webviewTag: true",
+   "why": "<webview> tag enabled",
+   "layer": "rea-site"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 21,
+   "value": "contextIsolation: false",
+   "why": "page can tamper with preload/Electron internals",
+   "layer": "rea"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 24,
+   "value": "enableRemoteModule: true",
+   "why": "remote module: renderer reaches main-process objects",
+   "layer": "rea"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 22,
+   "value": "nodeIntegration: true",
+   "why": "page scripts get Node.js (files, processes)",
+   "layer": "rea"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 23,
+   "value": "webSecurity: false",
+   "why": "same-origin policy off",
+   "layer": "rea"
+  },
+  {
+   "category": "electron-version",
+   "file": "package.json",
+   "line": 9,
+   "value": "electron ^13.1.0: 32 majors behind 45, out of support (released 2021-05-25)",
+   "layer": "registry"
+  },
+  {
+   "category": "risky-api",
+   "file": "main.js",
+   "line": 50,
+   "value": "shell.openExternal(url) inside IPC handler \"open\"",
+   "layer": "rea-site"
+  },
+  {
+   "category": "network",
+   "file": "main.js",
+   "line": 33,
+   "value": "about.quicknotes-example.test",
+   "url": "https://about.quicknotes-example.test/",
+   "method": "about.loadURL",
+   "layer": "rea",
+   "documented": true
+  },
+  {
+   "category": "network",
+   "file": "main.js",
+   "line": 37,
+   "value": "updates.quicknotes-example.test",
+   "url": "https://updates.quicknotes-example.test/latest.json",
+   "method": "net.request",
+   "layer": "rea",
+   "documented": true
+  },
+  {
+   "category": "network",
+   "file": "main.js",
+   "line": 44,
+   "value": "t.metrics-example.test",
+   "url": "https://t.metrics-example.test/collect",
+   "method": "net.request",
+   "layer": "rea-site",
+   "documented": false
+  },
+  {
+   "category": "telemetry",
+   "file": "renderer.js",
+   "line": 3,
+   "value": "Google Analytics (www.google-analytics.com)",
+   "layer": "rea"
+  },
+  {
+   "category": "telemetry",
+   "file": "main.js",
+   "line": 13,
+   "value": "Sentry (o12345.ingest.sentry.io)",
+   "layer": "string"
+  }
+ ],
+ "grep": [
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 8,
+   "value": "nodeIntegration: true",
+   "comment": true,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 8,
+   "value": "contextIsolation: false",
+   "comment": true,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 9,
+   "value": "webSecurity: false",
+   "comment": true,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 9,
+   "value": "sandbox: false",
+   "comment": true,
+   "layer": "grep"
+  },
+  {
+   "category": "telemetry",
+   "file": "main.js",
+   "line": 10,
+   "value": "Google Analytics",
+   "comment": true,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 11,
+   "value": "contextIsolation: false",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "telemetry",
+   "file": "main.js",
+   "line": 13,
+   "value": "Sentry",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 21,
+   "value": "contextIsolation: false",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 22,
+   "value": "nodeIntegration: true",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 23,
+   "value": "webSecurity: false",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 24,
+   "value": "enableRemoteModule: true",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 30,
+   "value": "sandbox: false",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 30,
+   "value": "allowRunningInsecureContent: true",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 30,
+   "value": "webviewTag: true",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "network",
+   "file": "main.js",
+   "line": 33,
+   "value": "about.quicknotes-example.test",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "network",
+   "file": "main.js",
+   "line": 37,
+   "value": "updates.quicknotes-example.test",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "network",
+   "file": "main.js",
+   "line": 44,
+   "value": "t.metrics-example.test",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "risky-api",
+   "file": "main.js",
+   "line": 50,
+   "value": "openExternal",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "telemetry",
+   "file": "renderer.js",
+   "line": 3,
+   "value": "Google Analytics",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "electron-version",
+   "file": "package.json",
+   "line": 9,
+   "value": "\"electron\": \"^13.1.0\"",
+   "comment": false,
+   "layer": "grep"
+  }
+ ],
+ "hosts_in_strings": [
+  {
+   "host": "o12345.ingest.sentry.io",
+   "where": "main.js:13",
+   "count": 1,
+   "documented": false,
+   "vendor": "Sentry"
+  },
+  {
+   "host": "about.quicknotes-example.test",
+   "where": "main.js:33",
+   "count": 1,
+   "documented": true,
+   "vendor": null
+  },
+  {
+   "host": "updates.quicknotes-example.test",
+   "where": "main.js:37",
+   "count": 1,
+   "documented": true,
+   "vendor": null
+  },
+  {
+   "host": "t.metrics-example.test",
+   "where": "main.js:44",
+   "count": 1,
+   "documented": false,
+   "vendor": null
+  },
+  {
+   "host": "www.google-analytics.com",
+   "where": "renderer.js:3",
+   "count": 1,
+   "documented": false,
+   "vendor": "Google Analytics"
+  }
+ ]
+}

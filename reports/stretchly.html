@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Stretchly - electron-xray</title><style>*{box-sizing:border-box}body{margin:0;background:#0d1016;color:#e8ecf3;font:16px/1.45 ui-sans-serif,system-ui,-apple-system,sans-serif}
+.wrap{max-width:1500px;margin:0 auto;padding:34px 44px}
+.top{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}.top h1{font:800 40px/1.1 ui-monospace,Menlo,monospace;margin:0;letter-spacing:-1px}
+.ver{color:#8b95a7;font:600 20px ui-monospace,Menlo,monospace}.desc{color:#aab3c5;margin:6px 0 0;font-size:18px;max-width:1100px}
+.tag{display:inline-block;background:#f5c04a;color:#10131a;font:800 15px ui-monospace,Menlo,monospace;padding:5px 12px;border-radius:6px;letter-spacing:.5px}
+.meta{color:#8b95a7;font:14px ui-monospace,Menlo,monospace;margin-top:10px}
+.tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:22px 0}
+.tile{background:#151a23;border:1px solid #232a37;border-radius:12px;padding:14px 16px}.tile b{display:block;font:800 38px/1 ui-monospace,Menlo,monospace}.tile span{color:#8b95a7;font-size:14px}
+.tile.warn b{color:#ff8a65}.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.card{background:#151a23;border:1px solid #232a37;border-radius:12px;padding:14px 18px;min-height:120px}.card h2{font-size:15px;text-transform:uppercase;letter-spacing:1.2px;color:#8b95a7;margin:0 0 10px}
+.row{display:flex;gap:8px;align-items:center;font:14.5px/1.5 ui-monospace,Menlo,monospace;padding:3px 0;border-bottom:1px solid #1c2230}.row:last-child{border:0}
+.row .v{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.row .w{color:#6d7789;font-size:12.5px}
+.b{font:700 11.5px ui-monospace,Menlo,monospace;padding:2px 7px;border-radius:5px;white-space:nowrap}.b.doc{background:#16352a;color:#5fd39a}.b.undoc{background:#3d2a14;color:#ffb35c}
+.b.sec{background:#3a1a24;color:#ff7a95}.b.pl{background:#f5c04a;color:#111}.b.lay{background:#1f2633;color:#8fa3c4}
+.none{color:#5c6577;font-style:italic}.foot{color:#6d7789;font-size:13.5px;margin-top:16px}
+table{border-collapse:collapse;width:100%;font:15px ui-monospace,Menlo,monospace}td,th{padding:8px 10px;border-bottom:1px solid #232a37;text-align:right}td:first-child,th:first-child{text-align:left}th{color:#8b95a7;font-weight:600}
+.big{font:800 30px ui-monospace,Menlo,monospace}</style></head><body><div class="wrap">
+<div class="top"><h1>Stretchly</h1><span class="ver">1.22.1 · BSD-2-Clause</span></div>
+<p class="desc">The break time reminder app</p>
+<div class="meta">46 source files · 8 BrowserWindows · 31 IPC handlers · 10 contextBridge APIs · 14 runtime deps · REA 6.7.0 · commit 64450ca (2026-11-05) · static only, nothing executed</div>
+<div class="tiles"><div class="tile"><b>ok</b><span>Electron 44 (latest 45)</span></div><div class="tile warn"><b>8</b><span>unsafe webPreferences set</span></div><div class="tile"><b>0</b><span>unsafe by default (absent key)</span></div><div class="tile"><b>0</b><span>telemetry signals</span></div><div class="tile"><b>0</b><span>hosts not in README</span></div><div class="tile warn"><b>5</b><span>openExternal on non-literal URL</span></div></div>
+<div class="grid">
+<div class="card"><h2>Window settings (webPreferences)</h2><div class="row"><span class="v">sandbox: false</span><span class="w">app/main.js:822</span></div><div class="row"><span class="v">sandbox: false</span><span class="w">app/main.js:738</span></div><div class="row"><span class="v">sandbox: false</span><span class="w">app/main.js:761</span></div><div class="row"><span class="v">sandbox: false</span><span class="w">app/main.js:1139</span></div><div class="row"><span class="v">sandbox: false</span><span class="w">app/main.js:1477</span></div><div class="row"><span class="v">sandbox: false</span><span class="w">app/main.js:791</span></div><div class="row"><span class="v">sandbox: false</span><span class="w">app/main.js:1872</span></div><div class="row"><span class="v">sandbox: false</span><span class="w">app/main.js:969</span></div></div>
+<div class="card"><h2>Telemetry and analytics</h2><div class="none">no known vendor endpoints</div></div>
+<div class="card"><h2>Network endpoints</h2><div class="row"><span class="v">api.github.com</span><span class="w">1×</span><span class="b doc">in README</span></div></div>
+<div class="card"><h2>Electron version</h2><div class="row"><span class="v">electron ^44.9.3</span><span class="b doc">supported</span></div><div class="row"><span class="v">major 44 released 2026-08-25</span></div><div class="row"><span class="v">latest 45; supported 43-45</span><span class="w">npm registry 2026-11-06</span></div></div>
+<div class="card"><h2>Risky calls</h2><div class="row"><span class="v">shell.openExternal(a.href)</span><span class="w">app/longBreak-renderer.js:43</span></div><div class="row"><span class="v">shell.openExternal(link)</span><span class="w">app/electron-bridge.mjs:18</span></div><div class="row"><span class="v">shell.openExternal(path)</span><span class="w">utils/context-bridge-exposers.js:9</span></div><div class="row"><span class="v">shell.openExternal(a.href)</span><span class="w">app/miniBreak-renderer.js:42</span></div><div class="row"><span class="v">shell.openExternal(event.target.href)</span><span class="w">app/preferences-renderer.js:282</span></div><div class="row"><span class="v">file-write: null</span><span class="w">app/main.js:1842</span></div></div>
+<div class="card"><h2>Same files, plain grep</h2><div class="row"><span class="v">grep hits (locations)</span><b>36</b></div><div class="row"><span class="v">this report (locations)</span><b>18</b></div><div class="w" style="margin-top:6px">grep cannot see defaults, or tell a comment from a setting.</div></div>
+</div>
+<div class="foot">electron-xray: static analysis with REA (rea-agents 6.7.0) plus our checks. Settings and endpoints the code declares, with file:line. Not a verdict on the app.</div>
+</div></body></html>

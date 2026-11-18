@@ -1,0 +1,38 @@
+{
+  "name": "electron-xray",
+  "version": "0.1.0",
+  "description": "Static privacy and security report for an Electron app: unsafe webPreferences (set or by default), Electron support status, telemetry vendors, network endpoints, openExternal on IPC input. Built on REA.",
+  "keywords": ["electron", "security", "privacy", "static-analysis", "webpreferences", "telemetry", "audit"],
+  "license": "MIT",
+  "author": "agentwik-labs",
+  "homepage": "https://github.com/agentwik-labs/electron-xray#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agentwik-labs/electron-xray.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agentwik-labs/electron-xray/issues"
+  },
+  "private": true,
+  "type": "module",
+  "bin": {
+    "electron-xray": "bin/electron-xray.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "data/",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": "^22.19.0 || ^24.11.0 || >=26.0.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@babel/parser": "8.0.4",
+    "rea-agents": "6.7.0"
+  }
+}

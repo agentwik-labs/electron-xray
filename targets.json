@@ -1,0 +1,6 @@
+[
+  { "id": "stretchly", "repo": "https://github.com/hovancik/stretchly", "commit": "64450ca8dee320a87d12ccdffe08a7c069a629bb" },
+  { "id": "caprine", "repo": "https://github.com/sindresorhus/caprine", "commit": "c3cbcf94e0c2f964fc9a709a8192625e57ce5206" },
+  { "id": "electron-markdownify", "repo": "https://github.com/amitmerchant1990/electron-markdownify", "commit": "13cb55c4bf7890f7217c78e3874faba1b6c6e095" },
+  { "id": "jitsi-meet-electron", "repo": "https://github.com/jitsi/jitsi-meet-electron", "commit": "28c2dfde875faf554c5ea6fa97b09c7ea9180273" }
+]

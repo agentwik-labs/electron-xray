@@ -1,0 +1,148 @@
+{
+ "name": "QuickNotes (our test fixture, clean twin)",
+ "pkg_name": "fixture-quicknotes",
+ "version": "1.0.0",
+ "description": "OUR TEST FIXTURE (clean twin). A tiny notes app.",
+ "license": "MIT",
+ "analysed_at": "2026-11-18T15:59:05.697Z",
+ "rea_version": "6.7.0",
+ "js_files": 3,
+ "rea_ms": 1994,
+ "coverage": {
+  "status": "unknown",
+  "truncated": false
+ },
+ "electron": {
+  "range": "^45.2.0",
+  "major": 45,
+  "latest": 45,
+  "released": "2026-10-21",
+  "supported": true,
+  "majors_behind": 0,
+  "snapshot": "2026-11-06"
+ },
+ "windows": [
+  {
+   "file": "main.js",
+   "line": 12,
+   "prefs": 4,
+   "status": "object-literal"
+  }
+ ],
+ "rea_summary": {
+  "browser_windows": 1,
+  "explicit_web_preferences": 4,
+  "preload_entrypoints": 1,
+  "context_bridge_apis": 1,
+  "exposed_api_members": 1,
+  "ipc": {
+   "operations": 2,
+   "literal_channels": 1,
+   "dynamic_channel_operations": 0,
+   "renderer_transmissions": 1,
+   "renderer_listeners": 0,
+   "main_handlers": 1,
+   "paired_renderer_transmissions": 1,
+   "ambiguous_renderer_transmissions": 0,
+   "unpaired_literal_renderer_transmissions": 0
+  },
+  "sender_validation_observations": 0,
+  "utility_processes": 0,
+  "resolved_utility_entrypoints": 0,
+  "native_addon_bindings": 0,
+  "resolved_native_addon_bindings": 0
+ },
+ "implicit": [],
+ "deps": [
+  "marked"
+ ],
+ "dev_deps": 1,
+ "telemetry_deps": [],
+ "facts": [
+  {
+   "category": "network",
+   "file": "main.js",
+   "line": 26,
+   "value": "updates.quicknotes-example.test",
+   "url": "https://updates.quicknotes-example.test/latest.json",
+   "method": "net.request",
+   "layer": "rea",
+   "documented": true
+  }
+ ],
+ "grep": [
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 6,
+   "value": "nodeIntegration: true",
+   "comment": true,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 6,
+   "value": "contextIsolation: false",
+   "comment": true,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 7,
+   "value": "webSecurity: false",
+   "comment": true,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 7,
+   "value": "sandbox: false",
+   "comment": true,
+   "layer": "grep"
+  },
+  {
+   "category": "telemetry",
+   "file": "main.js",
+   "line": 8,
+   "value": "Google Analytics",
+   "comment": true,
+   "layer": "grep"
+  },
+  {
+   "category": "web-preference",
+   "file": "main.js",
+   "line": 9,
+   "value": "contextIsolation: false",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "network",
+   "file": "main.js",
+   "line": 26,
+   "value": "updates.quicknotes-example.test",
+   "comment": false,
+   "layer": "grep"
+  },
+  {
+   "category": "electron-version",
+   "file": "package.json",
+   "line": 9,
+   "value": "\"electron\": \"^45.2.0\"",
+   "comment": false,
+   "layer": "grep"
+  }
+ ],
+ "hosts_in_strings": [
+  {
+   "host": "updates.quicknotes-example.test",
+   "where": "main.js:26",
+   "count": 1,
+   "documented": true,
+   "vendor": null
+  }
+ ]
+}
